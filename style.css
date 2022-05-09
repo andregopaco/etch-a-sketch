@@ -11,10 +11,13 @@ body {
     height: 800px;
     border: solid black 2px;
     display: flex;
-    text-align: center;
-    justify-content: center;
+    flex-wrap: wrap;
 }
 
 .test {
-
+    flex: 1 0 auto;
+    background-color: aqua;
+    border: dashed 1px green;
+    width: 200px;
+    aspect-ratio: 1 / 1;
 }
