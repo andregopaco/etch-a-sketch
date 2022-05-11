@@ -2,6 +2,7 @@ body {
     display: flex;
     flex-direction: column;
     text-align: center;
+    font-family: 'Courier New', Courier, monospace
 }
 
 #container {
@@ -21,3 +22,5 @@ body {
     width: 200px;
     aspect-ratio: 1 / 1;
 }
+
+/* on java, you'll need to divide the width (800) by the number of tiles on a side to get the ".test" maximum width distance. Then, you'll need to update the value. */
