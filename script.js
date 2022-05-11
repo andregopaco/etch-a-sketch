@@ -13,11 +13,18 @@ for (let i = 0; i < gridTiles; i++) {
 
 // let allTiles = document.getElementsByClassName('test');
 let allTiles = document.querySelectorAll('.test');
-for (tile of allTiles) {
+// for (tile of allTiles) {
+//     tile.addEventListener('mouseover', () => {
+//         tile.classList.add("painted");
+//     });
+// }
+
+allTiles.forEach((tile) => { 
     tile.addEventListener('mouseover', () => {
         tile.classList.add("painted");
     });
-}
+});
+
 
 // update the value of the width of each div
 let tileWidth = (800 / gridSide) + " px";

@@ -17,8 +17,7 @@ body {
 
 .test {
     flex: 1 0 auto;
-    background-color: lightpink;
-    border: dashed 1px blueviolet;
+    border: dashed 1px black;
     width: 200px;
     aspect-ratio: 1 / 1;
 }
