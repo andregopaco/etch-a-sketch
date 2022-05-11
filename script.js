@@ -1,17 +1,17 @@
 const container = document.querySelector('#container');
 
 // user shall input the amount of piles he/she wants on the grid (from 16x16 until 100x100)
-let gridSide = 10;
+let gridSide = 3;
 let gridTiles = gridSide ** 2;
 
 // update the value of the width of each div
-let tileWidth = (750 / gridSide);
+let tileSize = (800 / gridSide) -2;
 
 // creation of divs based on user input
 for (let i = 0; i < gridTiles; i++) {
     let tile = document.createElement('div');
     tile.classList.add('test');
-    tile.setAttribute('style', `width: ${tileWidth}px`);
+    tile.setAttribute('style', `width: ${tileSize}px`);
     container.appendChild(tile);
 }
 
