@@ -1,27 +1,26 @@
 const container = document.querySelector('#container');
-
-// user shall input the amount of piles he/she wants on the grid (from 16x16 until 100x100)
-let gridSide = 3;
+let gridSide = document.querySelector("#inputValue").value;
 let gridTiles = gridSide ** 2;
+let tileSize = (800 / gridSide) - 2;
 
-// update the value of the width of each div
-let tileSize = (800 / gridSide) -2;
-
-// creation of divs based on user input
-for (let i = 0; i < gridTiles; i++) {
-    let tile = document.createElement('div');
-    tile.classList.add('test');
-    tile.setAttribute('style', `width: ${tileSize}px`);
-    container.appendChild(tile);
+function createGrid(amount) {
+    for (let i = 0; i < amount; i++) {
+        let tile = document.createElement('div');
+        tile.classList.add('test');
+        tile.setAttribute('style', `width: ${tileSize}px`);
+        container.appendChild(tile);
+    }
 }
 
-// let allTiles = document.getElementsByClassName('test');
+createGrid(gridTiles);
+
+// const inputBtn = document.getElementById("inputValue");
+// const val = document.querySelector('#inputValue').value;
+
+// inputBtn.addEventListener('input', );
+
+
 let allTiles = document.querySelectorAll('.test');
-// for (tile of allTiles) {
-//     tile.addEventListener('mouseover', () => {
-//         tile.classList.add("painted");
-//     });
-// }
 
 allTiles.forEach((tile) => { 
     tile.addEventListener('mouseover', () => {
@@ -30,16 +29,14 @@ allTiles.forEach((tile) => {
 });
 
 
-// create a function that paint a div by clicking on it OR by hovering over it. Once its hovered, the function effect is still valid.
-// the function will either: 1. change bg-color of the div; 2. add a class to the div, and this class shall have a different color
 
-
-// create a clear board function that resets all bg-color or remove the new class of all divs
 function clearBoard() {
     for (tile of allTiles) {
         tile.classList.remove("painted");
     }
 }
 
+const clearButton = document.getElementById("clearBtn");
+clearButton.onclick = clearBoard;
 // add color options to paint brush
 

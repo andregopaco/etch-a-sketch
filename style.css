@@ -2,7 +2,7 @@ body {
     display: flex;
     flex-direction: column;
     text-align: center;
-    font-family: 'Courier New', Courier, monospace
+    font-family: 'Courier New', Courier, monospace;
 }
 
 #container {
@@ -12,17 +12,17 @@ body {
     border: solid black 2px;
     display: flex;
     flex-wrap: wrap;
+    margin-bottom: 20px;
 }
 
 .test {
     flex: 1 0 auto;
-    border: dashed 1px black;
+    border: dashed 0.5px gray;
     width: 200px;
     aspect-ratio: 1 / 1;
+    background-color: white;
 }
 
 .painted {
     background-color: black;
-}
-
-/* on java, you'll need to divide the width (800) by the number of tiles on a side to get the ".test" maximum width distance. Then, you'll need to update the value. */
+}s
