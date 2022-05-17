@@ -27,6 +27,7 @@ function paintGrid() {
 paintGrid();
 
 function clearBoard() {
+    let allTiles = document.querySelectorAll('.test');
     for (tile of allTiles) {
         tile.classList.remove("painted");
     }
