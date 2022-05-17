@@ -15,6 +15,10 @@ body {
     margin-bottom: 20px;
 }
 
+#cor {
+    margin: .4rem;
+}
+
 .test {
     flex: 1 0 auto;
     border: dashed 0.5px gray;
@@ -25,4 +29,5 @@ body {
 
 .painted {
     background-color: black;
-}s
+}
+
